@@ -112,7 +112,7 @@ GET:
 		return -1;
 	}
 	uint32_t sessionIndex = 0;
-
+	
 	status = Ps2_StartStream(deviceHandle, sessionIndex);
 	if (status != PsReturnStatus::PsRetOK)
 	{
@@ -121,6 +121,8 @@ GET:
 		return -1;
 	}
 
+	Ps2_SetSpatialFilterEnabled(deviceHandle, sessionIndex, false);
+	
 	PsCameraParameters cameraParameters;
 	status = Ps2_GetCameraParameters(deviceHandle, sessionIndex, PsDepthSensor, &cameraParameters);
 

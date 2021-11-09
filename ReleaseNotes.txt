@@ -1,3 +1,6 @@
+﻿V3.4.6
+1.Change the default mode of the camera to WDR mode
+
 ﻿V3.4.5
 1. support mipi camera on nvidia nano
 
